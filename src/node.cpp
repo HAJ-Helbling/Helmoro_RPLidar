@@ -58,7 +58,7 @@ void publish_scan(ros::Publisher *pub,
     static int scan_count = 0;
     sensor_msgs::LaserScan scan_msg;
 
-    scan_msg.header.stamp = start;
+    scan_msg.header.stamp = ros::Time::now(); //start;
     scan_msg.header.frame_id = frame_id;
     scan_count++;
 
